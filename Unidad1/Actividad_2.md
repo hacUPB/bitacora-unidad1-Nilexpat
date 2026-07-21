@@ -1,4 +1,8 @@
 ## Actividad 2: Ciclo fetch-decode-execute
+
+> [!NOTE]
+> Fetch–Decode–Execute (Buscar–Decodificar–Ejecutar)
+
 El siguiente programa está escrito en el lenguaje ensamblador del computador Hack. Este computador no es un computador comercial, sino un computador didáctico que te permitirá acercarte a los conceptos fundamentales de manera amigable.
 
 Analiza el siguiente programa (está en lenguaje ensamblador).
@@ -18,10 +22,30 @@ Analiza el siguiente programa (está en lenguaje ensamblador).
 
 RTA: puedo observar que el programa sigue las siguientes instrucciones 
 
+* -> se pociciona en el espacio de la memoria 1
+  
+* -> se asigna 1 a al registro D
+  
+* -> se dirige al espacio de la memoria 2
+  
+* -> se realiza una resta en el registro D (D=1+2)
+  
+* -> guarda el registro D en la posicion 16 de la Memoria
+  
+* -> y se activa una Etiqueta en donde realiza un salto a END
+  
+* -> Se repite un loop infinito en END
+
+* ¿Qué sucede? un ciclo
+* ¿Qué valor se almacena en la dirección de memoria 16? se almacena el numero 3
+* ¿Por qué crees que es ese valor? Por el resultado de la suma y M=D
+* ¿Qué instrucciones se ejecutan en cada ciclo Fetch-Decode-Execute? 
+* ¿Qué cambios observas en el contenido de la memoria y los registros? cambio de la pocicion de memoria, varibles e informacion en la posicion de memoria 16
+* ¿Qué instrucciones se ejecutan en cada ciclo Fetch-Decode-Execute?
 * -> se pociciona en el espacio de la memoria 1 
 * -> se asigna 1 a al registro D 
 * -> se dirige al espacio de la memoria 2 
 * -> se realiza una resta en el registro D (D=1+2)
 * -> guarda el registro D en la posicion 16 de la Memoria
 * -> y se activa una Etiqueta en donde realiza un salto a END
-* -> Se repite el ciclo
+* -> Se repite un loop infinito en END
