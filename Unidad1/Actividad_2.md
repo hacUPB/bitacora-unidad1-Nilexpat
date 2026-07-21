@@ -117,6 +117,8 @@ Escribe un programa en lenguaje ensablador que sume los números 5 y 10, y almac
 
 ## **Extra**
 
+Asigne variables y deles un valor y luego restelas
+
 ```asm
 \\ Variable = 15
 @15
@@ -143,6 +145,8 @@ D;JGT
 D;JLE
 
 ```
+
+## **Ejemplo**
 
 
 
