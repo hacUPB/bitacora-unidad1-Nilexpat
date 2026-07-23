@@ -1,3 +1,11 @@
+> [!NOTE]
+> * La patalla es de 256 px x 512 px
+> * Los registros se cuentan de izquierda hacia derecha y no de arriba hacia abajo
+> * Para llenar el ancho de una pantalla necesito 32 regiones
+> * Inicio de la pantalla RAM[16384] (@SCREEN)
+> * Fin de la pantalla RAM[24575]
+> * El teclado solamante tiene un registro 24573 (@KBD): caundo el usuario preciona una tecla el valor en codigo ASCII aparece y cuando se suelta el teclado el valor aparece en 0
+
 ## Actividad 3: Explorando la arquitectura del computador Hack
 
 Ahora vamos a analizar juntos el siguiente programa. Este programa tendrá todos los conceptos que vamos investigar en la siguiente fase de la unidad de manera más profunda. En qué nos enfocaremos:
@@ -52,9 +60,4 @@ M=M+1
 0;JMP
 ```
 
-- la patalla es de 256 px x 512 px
-- los registros se cuentan de izquierda hacia derecha y no de arriba hacia abajo
-- para llenar el ancho de una pantalla necesito 32 regiones
 
-- inicio de la pantalla RAM[16384]
-- fin de la pantalla RAM[24576]
