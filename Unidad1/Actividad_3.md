@@ -51,3 +51,10 @@ M=M+1
 @READKEYBOARD
 0;JMP
 ```
+
+- la patalla es de 256 px x 512 px
+- los registros se cuentan de izquierda hacia derecha y no de arriba hacia abajo
+- para llenar el ancho de una pantalla necesito 32 regiones
+
+- inicio de la pantalla RAM[16384]
+- fin de la pantalla RAM[24576]
