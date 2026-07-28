@@ -40,5 +40,53 @@ M=D
 
 
 
+# Actividad Integrada: Dibuja un línea horizontal en la pantalla 
+
+```asm
+@32
+D=A
+@j
+M=D
+
+@SCREEN
+D=A
+
+@i
+M=D
+
+
+```
+
+
+
+```c+
+var SCREEM = -1
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
