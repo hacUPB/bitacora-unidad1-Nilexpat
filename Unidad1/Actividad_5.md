@@ -25,7 +25,7 @@ M=D
 @i
 D=D-M
 @SUMA
-D;JQE un salto en donde D<0
+D;JLT
 
 @j
 M=D
