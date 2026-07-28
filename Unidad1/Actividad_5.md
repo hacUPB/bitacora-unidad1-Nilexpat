@@ -9,17 +9,36 @@ D=A
 @i
 M=D
 
-@i
-M=D
-
-(RESTA)
 @1
-D=D-A
+D=A
 @j
 M=D
-@RESTA
-D;JGT
 
+@0
+D=A
+
+(SUMA)
+@j
+D=D+M
+@j
+M=D
+@i
+D=D-M
+@SUMA
+D;JQE un salto en donde D<0
+
+@j
+M=D
 
 
 ```
+
+
+
+
+
+
+
+
+
+
