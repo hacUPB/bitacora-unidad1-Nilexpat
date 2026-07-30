@@ -83,6 +83,12 @@ D=A
 A=M
 M=D
 
+@punt
+A=M
+D=M
+@j
+M=D
+
 ```
 
 
