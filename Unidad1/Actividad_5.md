@@ -34,35 +34,59 @@ M=D
 ```
 
 
+# Actividad Integrada: Dibuja un línea en el borde izquierdo
 
 
+```asm
+@SCREEN
+M=-1
 
+```
 
+```c+
+var SCREEM = -1 ;
+
+```
 
 
 # Actividad Integrada: Dibuja un línea horizontal en la pantalla 
 
 ```asm
-@32
+@SCREEN
 D=A
 @j
 M=D
 
 @SCREEN
 D=A
-
+@32
+D=D+A
 @i
 M=D
 
 
+@SCREEN
+D=A
+
+/////////////////////////
+(LOOP)
+@j
+M=M+1  // suma el valor de la RAM una unidad
+
+D=M   // copia el valor de la RAM en D para luego pasarlo a A
+A=D
+M=-1
+
+@i
+D=D-M
+@LOOP
+D;JLT
+
+
 ```
 
 
 
-```c+
-var SCREEM = -1
-
-```
 
 
 
