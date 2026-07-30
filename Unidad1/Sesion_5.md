@@ -12,6 +12,8 @@ for(int i = 1; i <=100; i++){
 	}
 ```
 
+* Convierte la versión del for a ensamblador.
+
 ```asm
 
 @1
@@ -34,6 +36,6 @@ MD=M-1 // esto es para guardar el registro en M y en D a la vez
 @LOOP
 D;JGE
 
-
-
 ```
+* Compara las versiones en ensamblador del while y del for. ¿Qué puedes concluir?
+  Se puede concluir que la diferencia entre el while y el for es que el for requiere un contador.
