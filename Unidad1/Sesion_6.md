@@ -21,18 +21,70 @@ b = *p;
 ```
 Convierte estos programas a ensamblador y realiza la simulación paso a paso. Recuerda la metodología: predice, ejecuta, observa y reflexiona.
 
-```asm
+### BITACORA:
+
+
+```C++
 int a = 10;
 int* p;
 p = &a;
 *p = 20;
+```
 
+```asm
+@10
+D=A
+@i
+M=D
+
+@i
+D=A
+@punt
+M=D
+
+@20
+D=A
+
+@punt
+A=M
+M=D
+
+```
+
+
+```C++
 int a = 10;
 int b = 5;
 int *p;
 p = &a;
 b = *p;
 ```
+
+```asm
+@10
+D=A
+@i
+M=D
+
+@5
+D=A
+@j
+M=D
+
+@i
+D=A
+@punt
+M=D
+
+@20
+D=A
+
+@punt
+A=M
+M=D
+
+```
+
 
 ## Actividad integrada: Experimenta con arreglos
 
