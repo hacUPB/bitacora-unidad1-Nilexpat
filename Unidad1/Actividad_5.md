@@ -59,19 +59,16 @@ M=D
 
 @SCREEN
 D=A
-@32
+@31
 D=D+A
 @i
 M=D
 
 
-@SCREEN
-D=A
 
-/////////////////////////
 (LOOP)
 @i
-M=D
+D=M
 @j
 M=M+1  // suma el valor de la RAM una unidad
 
@@ -79,13 +76,13 @@ A=M   // copia el valor de la RAM en A
 
 M=-1
 
-@i
+@j
 D=D-M
 @LOOP
 D;JGE
 
-
 ```
+<img width="968" height="491" alt="image" src="https://github.com/user-attachments/assets/4ad9c126-0344-4b7e-a0ba-3b9662e7b9a7" />
 
 
 
