@@ -73,8 +73,8 @@ D=A
 @j
 M=M+1  // suma el valor de la RAM una unidad
 
-D=M   // copia el valor de la RAM en D para luego pasarlo a A
-A=D
+A=M   // copia el valor de la RAM en A 
+
 M=-1
 
 @i
