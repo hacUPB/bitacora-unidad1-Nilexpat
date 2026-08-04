@@ -70,6 +70,8 @@ D=A
 
 /////////////////////////
 (LOOP)
+@i
+M=D
 @j
 M=M+1  // suma el valor de la RAM una unidad
 
@@ -80,7 +82,7 @@ M=-1
 @i
 D=D-M
 @LOOP
-D;JLT
+D;JGE
 
 
 ```
