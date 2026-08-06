@@ -30,6 +30,27 @@ Que D=M significa que D toma el valor que hay dentro de la moría RAM de A y M=D
 
 
 
-9. Describe brevemente qué se necesita para leer un valor del teclado (`KBD`) y para “pintar” un pixel en la pantalla (`SCREEN`).
-10. Explica cómo se representa y manipula un puntero en el lenguaje ensamblador de Hack. Describe las operaciones equivalentes a `p = &a` (asignar dirección) y `p = 20` (escribir a través del puntero) usando instrucciones de ensamblador.
-11. ¿Cómo implementarías el acceso a un elemento de un arreglo, como `arr[j]`, en lenguaje ensamblador? Describe el rol de la dirección base del arreglo y el índice `j` en esta operación.
+7. Describe brevemente qué se necesita para leer un valor del teclado (`KBD`) y para “pintar” un pixel en la pantalla (`SCREEN`).
+para leer un valor del teclado necesitamos una instruccion qué lea el último registro de nuestro computador. Y para pintar un pixel en la pantalla screen basta con solo posicionarnos en @SCREEN y luego M=-1
+
+8. Explica cómo se representa y manipula un puntero en el lenguaje ensamblador de Hack. Describe las operaciones equivalentes a `p = &a` (asignar dirección) y `p = 20` (escribir a través del puntero) usando instrucciones de ensamblador.
+
+
+
+
+12. ¿Cómo implementarías el acceso a un elemento de un arreglo, como `arr[j]`, en lenguaje ensamblador? Describe el rol de la dirección base del arreglo y el índice `j` en esta operación.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
