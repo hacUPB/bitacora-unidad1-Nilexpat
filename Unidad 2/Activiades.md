@@ -59,3 +59,13 @@ se modifica 2 variables globales una que esta inicializada y otra que no, y lueg
 * ¿Qué ocurre? ¿Por qué?
 
 me parece un error de compilación porque para la función main no existe la variable "static" si las renombro con "int" se crea una variable con ese nombre pero no es la misma de la función funcionConStatic() y pasa lo mimos cuando se nombra "static int" solo se crea otra variable estatic en el mismo bloque de la RAM de la variable estatic de la anterior función
+
+* ¿Qué pasa con las variables cada que entras y sales de la función?
+* En relación a la pregunta anterior ¿Qué pasa con las variables locales estáticas?
+
+
+### Experimento 5: variables locales estática vs no estática:
+
+- ¿Qué ocurre? ¿Por qué?
+- Ves alguna diferencia entre las variables locales estáticas y no estáticas?
+- ¿Qué pasa con las variables cada que entras y sales de la función?
