@@ -46,4 +46,10 @@ Se intento correr una función que tenia la intención de modificar la primera l
 
 * ¿Qué ocurre? ¿Por qué?
 
-Se intento modificar una variable global sin éxito desde la función main, no se logro modificar debido a que era una variable constante (const), cuando una variable se convierte en "const" la varible se (guarda en el mismo bloque de instrucciones o en un segmento de solo lectura).
+Se intento modificar una variable global sin éxito desde la función main, no se logro modificar debido a que era una variable constante (const), cuando una variable se convierte en "const" la variable se (guarda en el mismo bloque de instrucciones o en un segmento de solo lectura).
+
+### Experimento 3: modificar el segmento de datos (variables globales):
+
+* ¿Qué ocurre? ¿Por qué?
+
+se modifica 2 variables globales una que esta inicializada y otra que no, y luego se les asigna un valor, el detalle que hay que tener en cuenta es que la variable no inicializada puede llegar a tener cualquier valor en este caso me salió que antes de modificar el valor tenia 0. 
