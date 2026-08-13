@@ -41,3 +41,9 @@
 * ¿Qué ocurre? ¿Por qué?
 
 Se intento correr una función que tenia la intención de modificar la primera lineal de código del la función main, el cual fallo porque no se puede modificar el espacio de memoria de la ROM ya que es un espacio de memoria hecho solo para la lectura de código. 
+
+### Experimento 2: modificar el segmento de datos (constante global):
+
+* ¿Qué ocurre? ¿Por qué?
+
+Se intento modificar una variable global sin éxito desde la función main, no se logro modificar debido a que era una variable constante (const), cuando una variable se convierte en "const" la varible se (guarda en el mismo bloque de instrucciones o en un segmento de solo lectura).
