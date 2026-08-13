@@ -53,3 +53,9 @@ Se intento modificar una variable global sin éxito desde la función main, no s
 * ¿Qué ocurre? ¿Por qué?
 
 se modifica 2 variables globales una que esta inicializada y otra que no, y luego se les asigna un valor, el detalle que hay que tener en cuenta es que la variable no inicializada puede llegar a tener cualquier valor en este caso me salió que antes de modificar el valor tenia 0. 
+
+### Experimento 4: modificar la variable local estática de una función por fuera de ella:
+
+* ¿Qué ocurre? ¿Por qué?
+
+me parece un error de compilación porque para la función main no existe la variable "static" si las renombro con "int" se crea una variable con ese nombre pero no es la misma de la función funcionConStatic() y pasa lo mimos cuando se nombra "static int" solo se crea otra variable estatic en el mismo bloque de la RAM de la variable estatic de la anterior función
