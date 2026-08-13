@@ -33,3 +33,11 @@
     
 - ¿Qué diferencias observas en el comportamiento de `a, b` y `c` tras cada llamada?
 - ¿Por qué ocurre esta diferencia?
+
+## Actividad 3: Mapa de memoria de un programa escrito en C++
+
+### Experimento 1: modificar el segmento de texto:
+
+* ¿Qué ocurre? ¿Por qué?
+
+Se intento correr una función que tenia la intención de modificar la primera lineal de código del la función main, el cual fallo porque no se puede modificar el espacio de memoria de la ROM ya que es un espacio de memoria hecho solo para la lectura de código. 
