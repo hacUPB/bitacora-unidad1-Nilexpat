@@ -100,3 +100,13 @@ Se crea un arreglo en el Heap porque es creado con el nombre new, y me manda a u
 4. ¿Qué es `p` en C++ y qué es `p` en C#? (en uno de ellos `p` es un objeto y en el otro es una referencia a un objeto). P en C++ es un objeto que guarda los valores que se le asignan cuando se le instancia, en cambio P en C# guarda la dirección de memoria en donde se almacenan los datos del constructor.
 5. ¿En qué parte de memoria se almacena `p` en C++ y en C#? En C++ se guarda en el espacio del Stack, en cambio en C# se guarda en el Heap.
 6. ¿Qué observaste con el depurador acerca de `p`? Según lo que observaste ¿Qué es un objeto en C++? 
+
+
+# Actividad 7: Objetos en el heap: creación y observación
+
+1. Explicación de la diferencia entre objetos creados en el stack y en el heap.  
+2. `pStack` ¿Es un objeto o una referencia a un objeto?
+3. `pHeap` ¿Es un objeto o una referencia a un objeto? Si es una referencia, ¿A qué objeto hace referencia?
+4. Observa en Memory1 (Debug->Windows->Memory->Memory1) el contenido de la dirección de memoria de `pHeap`, recuerda escribir en la entrada de texto de Memory1 la dirección de memoria de `&pHeap` y presionar Enter. Compara el contenido de memoria con el contenido de `pHeap` en la pestaña de Locals (Debug->Windows->Locals). ¿Qué observas? ¿Qué significa esto?
+
+
