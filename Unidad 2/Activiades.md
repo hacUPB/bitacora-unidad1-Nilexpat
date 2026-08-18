@@ -42,19 +42,19 @@
 
 Se intento correr una función que tenia la intención de modificar la primera lineal de código del la función main, el cual fallo porque no se puede modificar el espacio de memoria de la ROM ya que es un espacio de memoria hecho solo para la lectura de código. 
 
-### Experimento 2: modificar el segmento de datos (constante global):
+## Experimento 2: modificar el segmento de datos (constante global):
 
 * ¿Qué ocurre? ¿Por qué?
 
 Se intento modificar una variable global sin éxito desde la función main, no se logro modificar debido a que era una variable constante (const), cuando una variable se convierte en "const" la variable se (guarda en el mismo bloque de instrucciones o en un segmento de solo lectura).
 
-### Experimento 3: modificar el segmento de datos (variables globales):
+## Experimento 3: modificar el segmento de datos (variables globales):
 
 * ¿Qué ocurre? ¿Por qué?
 
 se modifica 2 variables globales una que esta inicializada y otra que no, y luego se les asigna un valor, el detalle que hay que tener en cuenta es que la variable no inicializada puede llegar a tener cualquier valor en este caso me salió que antes de modificar el valor tenia 0. 
 
-### Experimento 4: modificar la variable local estática de una función por fuera de ella:
+## Experimento 4: modificar la variable local estática de una función por fuera de ella:
 
 * ¿Qué ocurre? ¿Por qué?
 
@@ -64,8 +64,28 @@ me parece un error de compilación porque para la función main no existe la var
 * En relación a la pregunta anterior ¿Qué pasa con las variables locales estáticas?
 
 
-### Experimento 5: variables locales estática vs no estática:
+## Experimento 5: variables locales estática vs no estática:
 
 - ¿Qué ocurre? ¿Por qué?
 - Ves alguna diferencia entre las variables locales estáticas y no estáticas?
 - ¿Qué pasa con las variables cada que entras y sales de la función?
+
+## Experimento 6: modificar el segmento de heap:
+
+- ¿Qué ocurre? ¿Por qué?
+
+Se crea un arreglo en el Heap porque es creado con el nombre new, y me manda a un puntero al espacio de memoria del heap, y luego se elimina, porque si se crea algo en el heap queda ahí para siempre, pero luego se vuelve a llamar al arreglo y produce un error pero este error sucede porque el arreglo ya no existe.
+
+- Comenta la línea de genera el error y analiza las siguientes preguntas:
+  
+    - ¿Qué diferencias notas entre el comportamiento y la gestión del `Heap` en comparación con el `Stack`?
+
+  En el Heap se guardan cosas en la memoria pero no es de forma temporal, en cambio con el Stack 
+
+    - ¿Qué consecuencias tendría no liberar la memoria reservada con `new`?
+ 
+      El computador puede volverse mas lento.
+      
+    - ¿Por qué es importante usar `delete[]` al liberar memoria asignada para un arreglo?
+ 
+      Para que el programa no consuma tantos recursos del sistema.
