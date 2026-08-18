@@ -89,3 +89,14 @@ Se crea un arreglo en el Heap porque es creado con el nombre new, y me manda a u
     - ¿Por qué es importante usar `delete[]` al liberar memoria asignada para un arreglo?
  
       Para que el programa no consuma tantos recursos del sistema.
+      
+# Actividad 6: Hola Objeto: creación de un objeto en el stack
+
+**Reflexiona sobre las siguientes cuestiones**:
+
+1. ¿Cuál es la diferencia entre un constructor y un destructor en C++?  El constructor sirve para inicializar un objeto, y el destructor es el libera espacio de la memoria.
+2. ¿Cuál es la diferencia entre un objeto y una clase en C++?  una clase es como un plano y no ocupa espacio en la memoria, en cambio un objeto es la instancia de una clase y estos objetos si viven en la memoria. Clase(planos de una casa) objeto (la casa construida).
+3. ¿Qué diferencia notas entre el objeto Punto en C++ y C#? Principalmente como se crea la instancia, en C++ se llana a un objeto con el constructor y en C# se crea el objeto en el Heap
+4. ¿Qué es `p` en C++ y qué es `p` en C#? (en uno de ellos `p` es un objeto y en el otro es una referencia a un objeto). P en C++ es un objeto que guarda los valores que se le asignan cuando se le instancia, en cambio P en C# guarda la dirección de memoria en donde se almacenan los datos del constructor.
+5. ¿En qué parte de memoria se almacena `p` en C++ y en C#? En C++ se guarda en el espacio del Stack, en cambio en C# se guarda en el Heap.
+6. ¿Qué observaste con el depurador acerca de `p`? Según lo que observaste ¿Qué es un objeto en C++? 
