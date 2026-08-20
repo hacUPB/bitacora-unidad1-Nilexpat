@@ -121,4 +121,15 @@ los objetos creados en el stack se inicializan norma y siguen en su totalidad la
 
     Por lo que veo pHeap esta guardado en la memoria Stack y este esta apuntando a una referencia de otro objeto Punto que se encuantra en la memoria heap con su imformacion.
 
+# Actividad 8: Funciones y objetos en C++
 
+
+1. ¿Qué ocurre después de llamar a la función `cambiarNombre`? ¿Por qué aparece el mensaje `Destructor: Punto cambiado(70, 80) destruido.`?
+
+
+   
+2. ¿Por qué `original` sigue existiendo luego de llamar `cambiarNombre`?
+
+
+   
+3. ¿En qué parte del mapa de memoria se encuentra `original` y en qué parte se encuentra `p`? ¿Son el mismo objeto? (recuerda usar siempre el depurador para responder estas preguntas).
