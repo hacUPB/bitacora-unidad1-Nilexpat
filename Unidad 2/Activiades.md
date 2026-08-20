@@ -174,3 +174,24 @@ En el Heap por que es se crea con el llamado `new`
 
 En el Stack.
 
+# Actividad integradora de aplicación
+
+1. **Diagnóstico del problema (análisis):**
+◦ Compila y ejecuta el código.
+◦ Identifica y explica con detalle al menos **dos errores críticos** de gestión de memoria en la clase `Personaje` y su uso en `simularEncuentro`.
+◦ Para cada error, describe:
+▪ ¿Cuál es el error?
+▪ ¿Por qué ocurre? Explica el mecanismo a nivel de memoria (stack, heap, punteros)
+▪ ¿Cuál es su consecuencia?
+2. Solución y refactorización (síntesis y creación):
+◦ Re-escribe la clase `Personaje` para que sea segura en cuanto a memoria. Debes utilizar los conocimientos adquiridos en esta unidad y por tanto tu solución no debería usar la **Regla de los tres** que probablemente sea la solución que te ofrezca una IA.
+◦ Presenta el código completo de tu clase `Personaje` corregida.
+3. **Justificación de la Solución:**
+Explica por qué cada uno de los cambios que añadiste resuelven los problemas que diagnosticaste.
+
+
+## Errores
+
+* Falta de un destructor del personaje
+* `copiaHeroe.nombre = "Copia de Aragorn";` Esta copiando el nombre del personaje pero no en el pesonaje original o alque le quiere cambiar el nombre ya que no esta modificando directamete lo que hay dentro de la memoria del copiaHeroe.
+
