@@ -145,3 +145,32 @@ Me parece que para la programación es una forma ágil de inicializar objetos ad
 2. En el programa, en qué segmento de memoria se están almacenando c1, c2, c3 y Contador::total? 
 
 c1,c2 se guardan en el stack, mientras que  c3 se guarda en el Heap y contador total  en las variables globales.
+
+# Actividad 10: Explorando el ciclo de vida de un objeto
+
+1. Explica el ciclo de vida de un objeto en el stack versus uno en el heap.
+
+Los objetos que son creados en el stack se destruyen automáticamente cuando se finaliza la función, en cambio si lo guardamos en el Heap hay que destruirlo manualmente. 
+
+## modificación 1
+
+* ¿Compila? ¿Por qué ocurre esto?
+
+No no compila ya que se esta llamando a una variable que no existe o no esta declarada en ese bloque de código, para ello es necesario inicializarla desde el mismo bloque. 
+
+
+## modificación 2
+
+1. ¿Por qué el objeto `pBloque` se destruye al salir del bloque y `pBloque2` no? Recuerda de nuevo, `pBloque2` es un objeto o es una referencia a un objeto?
+
+Porque es un Punto creado como una objeto en el stack estas se destruyen automáticamente cuando se termina un ciclo en un bloque de llaves, en cambio pBloque2 es una referencia de una dirección de memoria de una variable en el Heap esta como permanece de forma permanente en el código se puede llamar desde cualquier lado mientras no sea destruida, por eso es que auque salga del bloque este objeto no se va a destruir y es llamado y modificado por una referencia
+
+2. ¿En qué parte de la memoria se almacena `pBloque2`?
+
+En el Heap por que es se crea con el llamado `new`
+
+
+3. ¿En qué parte de la memoria se almacena el objeto al que apunta `pBloque2`?
+
+En el Stack.
+
