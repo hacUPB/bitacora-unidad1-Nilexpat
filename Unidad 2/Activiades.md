@@ -111,11 +111,11 @@ los objetos creados en el stack se inicializan norma y siguen en su totalidad la
  
 2. `pStack` ¿Es un objeto o una referencia a un objeto?
 
-     pStack es un Objeto creado apartir de un constructor y este se guarda en la memoria Stack
+     pStack es un Objeto creado a partir de un constructor y este se guarda en la memoria Stack
    
 3. `pHeap` ¿Es un objeto o una referencia a un objeto? Si es una referencia, ¿A qué objeto hace referencia?
 
-    PHeap por lo que entiendo en este ejarcicio es una referencia que guarda la direccion de memoria del PStack.
+    PHeap por lo que entiendo en este ejercicio es una referencia que guarda la dirección de memoria del PStack.
    
 4. Observa en Memory1 (Debug->Windows->Memory->Memory1) el contenido de la dirección de memoria de `pHeap`, recuerda escribir en la entrada de texto de Memory1 la dirección de memoria de `&pHeap` y presionar Enter. Compara el contenido de memoria con el contenido de `pHeap` en la pestaña de Locals (Debug->Windows->Locals). ¿Qué observas? ¿Qué significa esto?
 
@@ -126,10 +126,12 @@ los objetos creados en el stack se inicializan norma y siguen en su totalidad la
 
 1. ¿Qué ocurre después de llamar a la función `cambiarNombre`? ¿Por qué aparece el mensaje `Destructor: Punto cambiado(70, 80) destruido.`?
 
-
+Tengo la teoría de que se crea una copia con el nombre del punto cambiado pero al mismo tiempo como se finaliza la función `cambiarNombre` el destructor se activa automáticamente y lanza el mensaje de que el punto o la copia se destruye, imagino que es porque esta función no le retorna nada al main 
    
 2. ¿Por qué `original` sigue existiendo luego de llamar `cambiarNombre`?
 
-
+Porque no hay una comunicación correcta entre la función `cambiarNombre` con el `main`
    
 3. ¿En qué parte del mapa de memoria se encuentra `original` y en qué parte se encuentra `p`? ¿Son el mismo objeto? (recuerda usar siempre el depurador para responder estas preguntas).
+
+   Estoy seguro que los puntos que se crean se guardan en el stack, y creo que lo que se crea en la función cambiarNombre es una copia porque no veo que exista una referencia que vincule al Punto original para ser modificado.
