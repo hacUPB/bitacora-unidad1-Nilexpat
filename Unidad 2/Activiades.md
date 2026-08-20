@@ -17,7 +17,7 @@
 
   Para ver lo que pasa en tiempo real mientras que se ejecuta el paso a paso de la depuración.
 
-## Actividad 2: Paso por valor y paso por referencia
+# Actividad 2: Paso por valor y paso por referencia
 
 - **Predicción**: antes de ejecutar el programa, predice la salida de cada función y explica el resultado.
 
@@ -135,3 +135,13 @@ Porque no hay una comunicación correcta entre la función `cambiarNombre` con e
 3. ¿En qué parte del mapa de memoria se encuentra `original` y en qué parte se encuentra `p`? ¿Son el mismo objeto? (recuerda usar siempre el depurador para responder estas preguntas).
 
    Estoy seguro que los puntos que se crean se guardan en el stack, y creo que lo que se crea en la función cambiarNombre es una copia porque no veo que exista una referencia que vincule al Punto original para ser modificado.
+
+# Actividad 9: Objetos con miembros estáticos y variables de instancia
+
+1. ¿Qué puedes concluir de los miembros estáticos y de instancia de una clase en C++? ¿Cómo se gestionan en memoria? ¿Qué ventajas y desventajas tienen? ¿Cuándo es útil utilizarlos?
+
+Me parece que para la programación es una forma ágil de inicializar objetos además estos objetos se destruyen automáticamente cuando se finaliza la función, encambio si lo guadamos en el Heap hay que destruilo manualmente. 
+
+2. En el programa, en qué segmento de memoria se están almacenando c1, c2, c3 y Contador::total? 
+
+c1,c2 se guardan en el stack, mientras que  c3 se guarda en el Heap y contador total  en las variables globales.
