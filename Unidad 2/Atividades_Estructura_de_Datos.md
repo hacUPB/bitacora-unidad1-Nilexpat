@@ -8,3 +8,100 @@ Si requieres usar la función de eliminar un nodo es necesario hacer un recorrid
 
 
 <img width="342" height="386" alt="image" src="https://github.com/user-attachments/assets/8169e8db-8cba-47f0-84a9-10a4877a5039" />
+# Actividad 4: En esta actividad te toca a ti analizar una estructura de datos e implementarla.
+
+ofApp.h
+```cpp
+#pragma once
+#include "ofMain.h"
+// Nodo de la cola
+struct Node {
+		float x, y;
+		float radius;
+		ofColor color;
+		float opacity;
+		Node* next;
+    Node(float _x, float _y, float _radius, ofColor _color, float _opacity): x(_x), y(_y), radius(_radius), color(_color), opacity(_opacity), next(nullptr) {    }
+    };
+// Implementación manual de una cola (FIFO)
+class BrushQueue {
+		public:
+				Node* front;
+				Node* rear;
+				int size;
+				int maxSize;
+		    BrushQueue(int _maxSize);
+		    ~BrushQueue();
+		    void enqueue(float x, float y, float radius, ofColor color, float opacity);
+		    void dequeue();
+		    void clear();
+		    bool isEmpty();};
+
+// Constructor
+BrushQueue::BrushQueue(int _maxSize) : front(nullptr), rear(nullptr), size(0), maxSize(_maxSize) {}
+// Destructor
+BrushQueue::~BrushQueue() {
+		clear();
+		}
+// Implementa aquí `enqueue()`
+void BrushQueue::enqueue(float x, float y, float radius, ofColor color, float opacity) {
+
+		Node* rearPos = rear;
+		Node* newNode = new Node(x,y);
+
+
+		}
+
+		// TODO: crear un nuevo nodo y agregarlo al final de la cola.
+		// Si la cola supera `maxSize`, eliminar el nodo más antiguo con `dequeue()`.
+		}
+// Implementa aquí `dequeue()`
+void BrushQueue::dequeue() {
+
+		node* antiguo = front;
+		While (antiguo != nullptr){
+			Node* nextNode = antiguo->next;
+			delete antiguo;
+		}
+		antiguo->next = nullptr;
+		size--;
+		}
+		}
+// Implementa aquí `clear()`
+void BrushQueue::clear() {
+		node* current = front;
+		While (current != nullptr){
+			Node* nextNode = current->next;
+			delete current; 
+		}
+		front = rear = nullptr;
+		size = 0;
+		}
+// Implementa aquí `isEmpty()`
+bool BrushQueue::isEmpty() {
+	bool = false;
+		if(front = rear = nullptr)
+		{
+        return true;
+		 cout << "No existe ningun nodo";
+    } else {
+        return false;
+		cout << "Aun hay nodos en la lista";
+    }
+		}
+
+class ofApp : public ofBaseApp {
+		public:
+				BrushQueue strokes; // Cola de trazos
+				float backgroundHue = 0;
+		    ofApp() : strokes(50) {} // Tamaño máximo de la cola
+		    void setup();
+		    void update();
+		    void draw();
+		    void keyPressed(int key);
+		    };
+
+
+```
+revisar: 
+* la función `void BrushQueue` esta incompleta y falta refinar bastante, ¿que pasa si el front es igual al rear?, o ¿si no existe ningún nodo?
