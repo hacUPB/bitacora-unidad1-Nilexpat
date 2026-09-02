@@ -76,15 +76,15 @@ void BrushQueue::enqueue(float x, float y, float radius, ofColor color, float op
 // Si la cola supera `maxSize`, eliminar el nodo más antiguo con `dequeue()`.
 // Implementa aquí `dequeue()`
 void BrushQueue::dequeue() {
+	if (front == nullptr) return; // Si la cola ya está vacía, no hace nada
 
 	Node * antiguo = front;
+	front = front->next;          // El nuevo frente pasa a ser el siguiente nodo
+	delete antiguo;               // Liberamos la memoria del nodo que salió
 
-
-	while(antiguo != nullptr) {
-		Node * nextNode = antiguo->next;
-		delete antiguo;
+	if (front == nullptr) {
+		rear = nullptr;           // Si ya no quedan nodos, rear también debe ser null
 	}
-	antiguo->next = nullptr;
 	size--;
 }
 
