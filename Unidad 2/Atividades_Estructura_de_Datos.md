@@ -94,6 +94,7 @@ void BrushQueue::clear() {
 	while (current != nullptr) {
 		Node * nextNode = current->next;
 		delete current;
+		current = nextNode;
 	}
 	front = rear = nullptr;
 	size = 0;
