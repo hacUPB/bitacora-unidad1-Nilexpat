@@ -1,7 +1,6 @@
 - Señala una línea de código que sea un ejemplo claro de encapsulamiento y explica por qué lo es.
 
-		```private string nombre;```
-   aqui
+`private string nombre;` aqui
 
 - ¿Por qué crees que el campo nombre es private pero la propiedad Nombre es public? ¿Qué problema se evita con esto?
 
