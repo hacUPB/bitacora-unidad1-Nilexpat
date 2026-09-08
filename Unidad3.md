@@ -1,4 +1,6 @@
-# Parte 2: análisis de código (en C#)
+# Actividad 1: diagnóstico inicial
+
+## Parte 2: análisis de código (en C#)
 
 - Señala una línea de código que sea un ejemplo claro de encapsulamiento y explica por qué lo es.
 
@@ -21,7 +23,7 @@ Almacena la variable nombre y un método abstracto dibujar.
 pienso que se hace un llamdo a cada objeto y cada objeto tiene un llamado diferente a fig.Dibujar() entonces de alguna forma, este Dibujar puede tener o seguir unas reglas para poder ejecutarse según las variables se les mande o el llamdo de la instacia tambien tienen vinculados por medio de un puntero la funcion que debe correr para cada figura `Circulo -> Dibujar de la clase circulo`
 
 
-# **Parte 3: hipótesis sobre la implementación**
+## **Parte 3: hipótesis sobre la implementación**
 
 Esta es la parte más importante. Imagina que eres un diseñador de lenguajes de programación. Tienes que decidir cómo implementar estos conceptos en la memoria y en el procesador. No hay respuestas incorrectas, solo ideas. Dibuja si te ayuda.
 
@@ -37,5 +39,7 @@ Creo que cada fig de cada clase es diferente y pide reglas diferentes entonces c
 
 siento que puede ser una dirección de memoria que se desconoce en su totalidad pero al mismo tiempo tiene un nombre que solo va a existir dentro de una clase especifica.
 
+
+# Actividad 2: Aplicación
 
 
