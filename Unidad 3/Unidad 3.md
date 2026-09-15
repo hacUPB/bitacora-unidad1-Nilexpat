@@ -149,3 +149,54 @@ int main() {
 El programa crea una instancia de la clase Myclass a este objeto se le asignan lo valores correspondientes y luego el main intenta leer lo que hay dentro de este objeto pero le es negado debido a que intenta entrar a un parámetro que esta privado que en este caso es `secret1`. 
 
 pero para poder leer esa información el usuario creo una alternativa mas segura y sofisticada desde la clase la cual el método `void printMembers` el cual es un método publico desde la clase padre que tiene acceso a estas variables privadas. Recordando de que las variables privadas solo se pueden usar dentro de la misma clase
+
+```cpp
+
+#include <iostream>
+class MyClass {
+private:
+		int secret1;
+		float secret2;
+		char secret3;
+public:
+		MyClass(int s1, float s2, char s3) : secret1(s1), secret2(s2), secret3(s3) {}
+    void printMembers() const {
+		    std::cout << "secret1: " << secret1 << "\n";
+		    std::cout << "secret2: " << secret2 << "\n";
+		    std::cout << "secret3: " << secret3 << "\n";
+		    }
+		};
+int main() {
+		MyClass obj(42, 3.14f, 'A');
+    // Usando reinterpret_cast para violar el encapsulamiento
+    int* ptrInt = reinterpret_cast<int*>(&obj);
+    float* ptrFloat = reinterpret_cast<float*>(ptrInt + 1);
+    char* ptrChar = reinterpret_cast<char*>(ptrFloat + 1);
+    // Accediendo y mostrando los valores privados
+    std::cout << "Accediendo directamente a los miembros privados:\n";
+    std::cout << "secret1: " << *ptrInt << "\n";
+    // Accede a secret1
+    std::cout << "secret2: " << *ptrFloat << "\n";
+    // Accede a secret2
+    std::cout << "secret3: " << *ptrChar << "\n";
+    // Accede a secret3
+    return 0;
+    }
+
+```
+* Compila el programa y ejecuta. **¿Qué puedes concluir?**
+
+1. se puede violar el principio de encapsulamiento si se conoce a profundidad el código para poder "diseccionar el arreglo de datos de la memoria "
+2. cuando se crea una varible en un objeto la primera varible siempre va a poseer la misma posicion de memoria que el objeto en este ejemplo la primera varible del objeto que es un entero int tiene la misma direccion de memoria `&obj`
+3. `reinterpret_cast<int*>` es como un abreviador de memoria el cual ocupa una cantidad estándar para cada diferente tipo de dato, por que la dirección de memoria puede ser muy extensa para un objeto pero el espacio que ocupa un entero dentro de un objeto no es el mismo que el del objeto entero, aqui un ejemplo visual:
+
+&obj:
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/ 
+
+reinterpret_cast<int*>: 
+
+_/_/_/_/_/_/_/  
+
+
+
+* En tus palabras, **¿Qué es el encapsulamiento? ¿Por qué es importante?**
