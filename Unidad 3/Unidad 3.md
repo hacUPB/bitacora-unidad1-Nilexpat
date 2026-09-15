@@ -50,3 +50,22 @@ De la aplicacion de esta actividad evidencie el uso del polimorfismo, también l
 Tambien mas adelante me gustaria argumentar como puede llegar a funcionar que cada partícula conserve su forma y color atravez de cada iteracio.
 
 # Actividad 3
+
+Antes de ejecutar el experimento:
+
+* ¿Qué esperas ver en memoria (hipótesis)? Ejecuta el código y muestra una captura de pantalla del objeto en la memoria.
+
+pues como una clase no es una instancia, no espero ver mucha información tal vez si la dirección de memoria de las partículas ya que esta si requiere ser instanciada.
+
+* ¿Qué puedes observar?
+
+<img width="1070" height="184" alt="image" src="https://github.com/user-attachments/assets/3f4e439b-1190-4075-aabb-c76057249d65" />
+
+
+* ¿Qué información te proporciona el depurador?
+
+Proporciona variables no inicializadas que tiene la  de la clase offapp, se puede ver en this la creacion de particulas, y como estas guardan posiciones de memoria 
+
+* ¿Qué puedes concluir?
+
+Que la memoria nunca esta limpia del todo, hay muchas varibles o información basura que se deben de remplazar, números extremadamente grandes
