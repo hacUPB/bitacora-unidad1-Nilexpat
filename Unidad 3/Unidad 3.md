@@ -76,7 +76,14 @@ Local
 <img width="1433" height="300" alt="image" src="https://github.com/user-attachments/assets/56531864-228a-4359-b5d2-af6bc8373644" />
 
 
-Memoria1
+Memoria1 = &miExplosionPrueba
 <img width="1117" height="85" alt="image" src="https://github.com/user-attachments/assets/4997ed48-e352-4c38-9ec8-173dfd4468a3" />
 
+
+Memoria1 = &miExplosionEstrella
+<img width="1462" height="296" alt="image" src="https://github.com/user-attachments/assets/2b7c8604-1677-4b2e-9fe3-d38063bd5045" />
+
+
 podemos ver como funcionan las clases abstractas ver como una misma función cambia o se adapta a una figura diferente, pero envés de cambiar es como si se crearan otras derivadas de la misma clase hija entonces hipotetizo que se hace primero un llamdo a la clase hija y luego a los métodos abstractos que que se inicializa con las instrucciones o reglas de esa clase hija.
+
+# Actividad 4
