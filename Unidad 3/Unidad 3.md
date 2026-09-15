@@ -73,7 +73,8 @@ Que la memoria nunca esta limpia del todo, hay muchas varibles o información ba
 Usa de nuevo el depurador para capturar un objeto de tipo CircularExplosion. Es posible que tengas que hacer modificaciones mínimas en el código para que puedas capturar este objeto más fácilmente. Observa con el depurador la ventana de Auto o Locals y la ventana de Memory 1. Trata de buscar en memoria todas las partes que componen al objeto tipo CircularExplosion ¿Qué puedes observar en la memoria? ¿Qué información te proporciona el depurador? ¿Qué puedes concluir? 
 
 Local
-<img width="1090" height="166" alt="image" src="https://github.com/user-attachments/assets/b945f24d-66fd-4be0-b27e-7485a05bf09a" />
+<img width="1113" height="264" alt="image" src="https://github.com/user-attachments/assets/93b6dbd1-8661-4b2f-8992-71d88062fa05" />
+
 Memoria1
 <img width="1117" height="85" alt="image" src="https://github.com/user-attachments/assets/4997ed48-e352-4c38-9ec8-173dfd4468a3" />
 
