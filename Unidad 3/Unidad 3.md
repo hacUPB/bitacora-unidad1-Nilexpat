@@ -42,6 +42,11 @@ siento que puede ser una dirección de memoria que se desconoce en su totalidad 
 
 # Actividad 2: Aplicación
 
-De la aplicaron de esta actividad evidencie el uso del polimorfismo, también la forma en que el programa cuenta el tiempo de vida de las particular recorriendo j de atrás para adelante, j = numero de partículas y cuando j se == a 0 explotan las partículas, y esta explosión también es aleatoria según las 2 diferentes clases de explosiones que hay. 
+De la aplicacion de esta actividad evidencie el uso del polimorfismo, también la forma en que el programa cuenta el tiempo de vida de las particular recorriendo j de atrás para adelante, j = numero de partículas y cuando j se == a 0 explotan las partículas, y esta explosión también es aleatoria según las 2 diferentes clases de explosiones que hay. 
 
-Tambien mas adelante me gustaria argumentar como puede llegar a funcionar que cada partícula conserve su forma y color atravez de cada iteracio. 
+<img width="1004" height="739" alt="image" src="https://github.com/user-attachments/assets/805f5a6c-3cfd-4c1c-939c-a42775bce9e5" />
+
+
+Tambien mas adelante me gustaria argumentar como puede llegar a funcionar que cada partícula conserve su forma y color atravez de cada iteracio.
+
+# Actividad 3
