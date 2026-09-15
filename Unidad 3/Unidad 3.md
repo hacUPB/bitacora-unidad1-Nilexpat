@@ -87,3 +87,31 @@ Memoria1 = &miExplosionEstrella
 podemos ver como funcionan las clases abstractas ver como una misma función cambia o se adapta a una figura diferente, pero envés de cambiar es como si se crearan otras derivadas de la misma clase hija entonces hipotetizo que se hace primero un llamdo a la clase hija y luego a los métodos abstractos que que se inicializa con las instrucciones o reglas de esa clase hija.
 
 # Actividad 4
+```cpp
+
+class AccessControl {
+private:
+		int privateVar;
+protected:
+		int protectedVar;
+public:
+		int publicVar;
+		AccessControl() : privateVar(1), protectedVar(2), publicVar(3) {}
+		};
+int main() {
+		AccessControl ac;
+		ac.publicVar = 10;
+		// Válido
+		// ac.protectedVar = 20;
+		// Error de compilación
+		// ac.privateVar = 30;
+		// Error de compilación
+		return 0;
+		}
+
+```
+ ¿Qué sucede? ¿Por qué sucede esto? ¿Qué puedes concluir?
+
+ Este Actividad tiene la finalidad de enseñarme como funciona el encapsulamiento con un código que intenta violar el principio de encapsulamiento pero solo es posible cuando Private y protected están comentadas ya que el otro es Public entonces el codigo se lo permite.
+
+ de aquí puedo concluir que se puede acceder a modificar una clase desde el main si la variable a modificar es publica, si es privada no se puede acceder de ninguna forma, y investigando un poco mas las que son Protected solo se pueden modificar si son clases hijas heredadas.
