@@ -73,8 +73,10 @@ Que la memoria nunca esta limpia del todo, hay muchas varibles o información ba
 Usa de nuevo el depurador para capturar un objeto de tipo CircularExplosion. Es posible que tengas que hacer modificaciones mínimas en el código para que puedas capturar este objeto más fácilmente. Observa con el depurador la ventana de Auto o Locals y la ventana de Memory 1. Trata de buscar en memoria todas las partes que componen al objeto tipo CircularExplosion ¿Qué puedes observar en la memoria? ¿Qué información te proporciona el depurador? ¿Qué puedes concluir? 
 
 Local
-<img width="1113" height="264" alt="image" src="https://github.com/user-attachments/assets/93b6dbd1-8661-4b2f-8992-71d88062fa05" />
+<img width="1433" height="300" alt="image" src="https://github.com/user-attachments/assets/56531864-228a-4359-b5d2-af6bc8373644" />
+
 
 Memoria1
 <img width="1117" height="85" alt="image" src="https://github.com/user-attachments/assets/4997ed48-e352-4c38-9ec8-173dfd4468a3" />
 
+podemos ver como funcionan las clases abstractas ver como una misma función cambia o se adapta a una figura diferente, pero envés de cambiar es como si se crearan otras derivadas de la misma clase hija entonces hipotetizo que se hace primero un llamdo a la clase hija y luego a los métodos abstractos que que se inicializa con las instrucciones o reglas de esa clase hija.
