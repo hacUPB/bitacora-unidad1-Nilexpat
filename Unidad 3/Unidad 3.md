@@ -203,3 +203,59 @@ reinterpret_cast<int*>:
 * En tus palabras, **¿Qué es el encapsulamiento? ¿Por qué es importante?**
 
 El encapsulamientgo es una forma de proteger el código de una clase para que este no sea vulnerado o alterado desde otro lado, imagina que tienes un edificio el cual esta construido por columnas estrategicamente constituidas y se aparece un mago que por arte de magia desapareciera una de esas columnas el edificio colapsaria,bueno asi puede suceder en nuestro codigo si alguien entra a modificarlo y no tenemos una protección para que eso no suceda.
+
+
+# Actividad 5
+
+**Concepto de herencia**: la herencia es otro concepto fundamental en la programación orientada a objetos. Observa de nuevo en `ofApp.h` la clase `CircularExplosion`. Observa que esta clase hereda de la clase `ExplosionParticle` que a su vez hereda de la clase `Particle`.
+
+
+
+* captura de nuevo la memoria que ocupa el objeto `CircularExplosion` compara la jerarquía de clases con los campos en memoria del objeto. ¿Qué puedes observar? ¿Qué información te proporciona el depurador? ¿Qué puedes concluir?
+
+<img width="1433" height="300" alt="image" src="https://github.com/user-attachments/assets/56531864-228a-4359-b5d2-af6bc8373644" />
+
+* ¿Cómo se implementa la herencia en C++?
+
+  
+
+* C++ permite hacer algo que C# no: herencia múltiple. **Realiza un experimento que te permita ver cómo se objeto en memoria cuya clase base tiene herencia múltiple.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
