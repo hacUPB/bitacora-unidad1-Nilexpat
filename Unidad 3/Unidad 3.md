@@ -110,8 +110,42 @@ int main() {
 		}
 
 ```
- ¿Qué sucede? ¿Por qué sucede esto? ¿Qué puedes concluir?
+ * ¿Qué sucede? ¿Por qué sucede esto? ¿Qué puedes concluir?
 
  Este Actividad tiene la finalidad de enseñarme como funciona el encapsulamiento con un código que intenta violar el principio de encapsulamiento pero solo es posible cuando Private y protected están comentadas ya que el otro es Public entonces el codigo se lo permite.
 
  de aquí puedo concluir que se puede acceder a modificar una clase desde el main si la variable a modificar es publica, si es privada no se puede acceder de ninguna forma, y investigando un poco mas las que son Protected solo se pueden modificar si son clases hijas heredadas.
+
+```cpp
+
+#include <iostream>
+class MyClass {
+private:
+		int secret1;
+		float secret2;
+		char secret3;
+public:
+		MyClass(int s1, float s2, char s3) : secret1(s1), secret2(s2), secret3(s3) {}
+    void printMembers() const {
+		    std::cout << "secret1: " << secret1 << "\n";
+		    std::cout << "secret2: " << secret2 << "\n";
+		    std::cout << "secret3: " << secret3 << "\n";
+		    }
+		};
+
+int main() {
+		MyClass obj(42, 3.14f, 'A');
+		// Esta línea causará un error de compilación
+		std::cout << obj.secret1 << std::endl;
+    obj.printMembers();
+    // Método público para mostrar los valores
+    return 0;
+    }
+
+```
+
+* Compila el programa. ¿Qué pasa?
+
+El programa crea una instancia de la clase Myclass a este objeto se le asignan lo valores correspondientes y luego el main intenta leer lo que hay dentro de este objeto pero le es negado debido a que intenta entrar a un parámetro que esta privado que en este caso es `secret1`. 
+
+pero para poder leer esa información el usuario creo una alternativa mas segura y sofisticada desde la clase la cual el método `void printMembers` el cual es un método publico desde la clase padre que tiene acceso a estas variables privadas. Recordando de que las variables privadas solo se pueden usar dentro de la misma clase
