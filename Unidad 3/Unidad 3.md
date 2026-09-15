@@ -191,6 +191,7 @@ int main() {
 3. `reinterpret_cast<int*>` es como un abreviador de memoria el cual ocupa una cantidad estándar para cada diferente tipo de dato, por que la dirección de memoria puede ser muy extensa para un objeto pero el espacio que ocupa un entero dentro de un objeto no es el mismo que el del objeto entero, aqui un ejemplo visual:
 
 &obj:
+
 ▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
 
 reinterpret_cast<int*>: 
@@ -200,3 +201,5 @@ reinterpret_cast<int*>:
 
 
 * En tus palabras, **¿Qué es el encapsulamiento? ¿Por qué es importante?**
+
+El encapsulamientgo es una forma de proteger el código de una clase para que este no sea vulnerado o alterado desde otro lado, imagina que tienes un edificio el cual esta construido por columnas estrategicamente constituidas y se aparece un mago que por arte de magia desapareciera una de esas columnas el edificio colapsaria,bueno asi puede suceder en nuestro codigo si alguien entra a modificarlo y no tenemos una protección para que eso no suceda.
