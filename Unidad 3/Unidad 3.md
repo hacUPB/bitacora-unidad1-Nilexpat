@@ -191,11 +191,11 @@ int main() {
 3. `reinterpret_cast<int*>` es como un abreviador de memoria el cual ocupa una cantidad estándar para cada diferente tipo de dato, por que la dirección de memoria puede ser muy extensa para un objeto pero el espacio que ocupa un entero dentro de un objeto no es el mismo que el del objeto entero, aqui un ejemplo visual:
 
 &obj:
-_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/ 
+▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
 
 reinterpret_cast<int*>: 
 
-_/_/_/_/_/_/_/  
+▢▢▢▢▢▢▢▢ 
 
 
 
