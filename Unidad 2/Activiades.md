@@ -1,0 +1,197 @@
+# actividad 1: Hello World!
+
+## Suma de dos enteros
+<img width="1456" height="188" alt="image" src="https://github.com/user-attachments/assets/ec5cfaea-f129-4ba0-995a-6c2731a63bde" />
+
+
+### Paso a Paso con breakpoint
+<img width="685" height="271" alt="image" src="https://github.com/user-attachments/assets/b0d0d56f-cfa9-4334-bd1b-4b3ead991dbb" />
+
+### **#Reflexión de esta actividad:**
+
+1. ¿Para qué sirven los breakpoints?
+
+  Sirve para posicionarnos en una parte de la instrucción, y depurar desde un punto en especifico.
+   
+2. ¿Para qué se usa la ventana de depuración Autos?
+
+  Para ver lo que pasa en tiempo real mientras que se ejecuta el paso a paso de la depuración.
+
+# Actividad 2: Paso por valor y paso por referencia
+
+- **Predicción**: antes de ejecutar el programa, predice la salida de cada función y explica el resultado.
+
+  Se Observa que existen 3 funciones ( paso x (valor, Referencia, Puntero)), se pide analizar y observar como funciona cada función y predecir que valores se entregan en el main cada función se le entrega una variable 10 y se copia en la variable n de la función.
+
+*  Valor: En el paso por valor se puede esperar una modificación en n de la función pero no va a modificar la variable original
+*  Referencia: modifica la variable origina
+*  Puntero: Modifica la variable original cambia la sintaxis 
+
+
+
+  Main 
+    
+- ¿Qué diferencias observas en el comportamiento de `a, b` y `c` tras cada llamada?
+- ¿Por qué ocurre esta diferencia?
+
+## Actividad 3: Mapa de memoria de un programa escrito en C++
+
+### Experimento 1: modificar el segmento de texto:
+
+* ¿Qué ocurre? ¿Por qué?
+
+Se intento correr una función que tenia la intención de modificar la primera lineal de código del la función main, el cual fallo porque no se puede modificar el espacio de memoria de la ROM ya que es un espacio de memoria hecho solo para la lectura de código. 
+
+## Experimento 2: modificar el segmento de datos (constante global):
+
+* ¿Qué ocurre? ¿Por qué?
+
+Se intento modificar una variable global sin éxito desde la función main, no se logro modificar debido a que era una variable constante (const), cuando una variable se convierte en "const" la variable se (guarda en el mismo bloque de instrucciones o en un segmento de solo lectura).
+
+## Experimento 3: modificar el segmento de datos (variables globales):
+
+* ¿Qué ocurre? ¿Por qué?
+
+se modifica 2 variables globales una que esta inicializada y otra que no, y luego se les asigna un valor, el detalle que hay que tener en cuenta es que la variable no inicializada puede llegar a tener cualquier valor en este caso me salió que antes de modificar el valor tenia 0. 
+
+## Experimento 4: modificar la variable local estática de una función por fuera de ella:
+
+* ¿Qué ocurre? ¿Por qué?
+
+me parece un error de compilación porque para la función main no existe la variable "static" si las renombro con "int" se crea una variable con ese nombre pero no es la misma de la función funcionConStatic() y pasa lo mimos cuando se nombra "static int" solo se crea otra variable estatic en el mismo bloque de la RAM de la variable estatic de la anterior función
+
+* ¿Qué pasa con las variables cada que entras y sales de la función?
+* En relación a la pregunta anterior ¿Qué pasa con las variables locales estáticas?
+
+
+## Experimento 5: variables locales estática vs no estática:
+
+- ¿Qué ocurre? ¿Por qué?
+- Ves alguna diferencia entre las variables locales estáticas y no estáticas?
+- ¿Qué pasa con las variables cada que entras y sales de la función?
+
+## Experimento 6: modificar el segmento de heap:
+
+- ¿Qué ocurre? ¿Por qué?
+
+Se crea un arreglo en el Heap porque es creado con el nombre new, y me manda a un puntero al espacio de memoria del heap, y luego se elimina, porque si se crea algo en el heap queda ahí para siempre, pero luego se vuelve a llamar al arreglo y produce un error pero este error sucede porque el arreglo ya no existe.
+
+- Comenta la línea de genera el error y analiza las siguientes preguntas:
+  
+    - ¿Qué diferencias notas entre el comportamiento y la gestión del `Heap` en comparación con el `Stack`?
+
+  En el Heap se guardan cosas en la memoria pero no es de forma temporal, en cambio con el Stack 
+
+    - ¿Qué consecuencias tendría no liberar la memoria reservada con `new`?
+ 
+      El computador puede volverse mas lento.
+      
+    - ¿Por qué es importante usar `delete[]` al liberar memoria asignada para un arreglo?
+ 
+      Para que el programa no consuma tantos recursos del sistema.
+      
+# Actividad 6: Hola Objeto: creación de un objeto en el stack
+
+**Reflexiona sobre las siguientes cuestiones**:
+
+1. ¿Cuál es la diferencia entre un constructor y un destructor en C++?  El constructor sirve para inicializar un objeto, y el destructor es el libera espacio de la memoria.
+2. ¿Cuál es la diferencia entre un objeto y una clase en C++?  una clase es como un plano y no ocupa espacio en la memoria, en cambio un objeto es la instancia de una clase y estos objetos si viven en la memoria. Clase(planos de una casa) objeto (la casa construida).
+3. ¿Qué diferencia notas entre el objeto Punto en C++ y C#? Principalmente como se crea la instancia, en C++ se llana a un objeto con el constructor y en C# se crea el objeto en el Heap
+4. ¿Qué es `p` en C++ y qué es `p` en #2? (en uno de ellos `p` es un objeto y en el otro es una referencia a un objeto). P en C++ es un objeto que guarda los valores que se le asignan cuando se le instancia, en cambio P en C# guarda la dirección de memoria en donde se almacenan los datos del constructor.
+5. ¿En qué parte de memoria se almacena `p` en C++ y en C#? En C++ se guarda en el espacio del Stack, en cambio en C# se guarda en el Heap.
+6. ¿Qué observaste con el depurador acerca de `p`? Según lo que observaste ¿Qué es un objeto en C++? 
+
+
+# Actividad 7: Objetos en el heap: creación y observación
+
+1. Explicación de la diferencia entre objetos creados en el stack y en el heap.
+
+los objetos creados en el stack se inicializan norma y siguen en su totalidad las reglas del constructor incluyendo el destructor, pero en el codigo observor que cuando se crea la variable `new pHeap` guarda los valores de un Punto en el Heap pero luego es necesario dar la instruccion `delete`.
+
+ 
+2. `pStack` ¿Es un objeto o una referencia a un objeto?
+
+     pStack es un Objeto creado a partir de un constructor y este se guarda en la memoria Stack
+   
+3. `pHeap` ¿Es un objeto o una referencia a un objeto? Si es una referencia, ¿A qué objeto hace referencia?
+
+    PHeap por lo que entiendo en este ejercicio es una referencia que guarda la dirección de memoria del PStack.
+   
+4. Observa en Memory1 (Debug->Windows->Memory->Memory1) el contenido de la dirección de memoria de `pHeap`, recuerda escribir en la entrada de texto de Memory1 la dirección de memoria de `&pHeap` y presionar Enter. Compara el contenido de memoria con el contenido de `pHeap` en la pestaña de Locals (Debug->Windows->Locals). ¿Qué observas? ¿Qué significa esto?
+
+    Por lo que veo pHeap esta guardado en la memoria Stack y este esta apuntando a una referencia de otro objeto Punto que se encuantra en la memoria heap con su imformacion.
+
+# Actividad 8: Funciones y objetos en C++
+
+
+1. ¿Qué ocurre después de llamar a la función `cambiarNombre`? ¿Por qué aparece el mensaje `Destructor: Punto cambiado(70, 80) destruido.`?
+
+Tengo la teoría de que se crea una copia con el nombre del punto cambiado pero al mismo tiempo como se finaliza la función `cambiarNombre` el destructor se activa automáticamente y lanza el mensaje de que el punto o la copia se destruye, imagino que es porque esta función no le retorna nada al main 
+   
+2. ¿Por qué `original` sigue existiendo luego de llamar `cambiarNombre`?
+
+Porque no hay una comunicación correcta entre la función `cambiarNombre` con el `main`
+   
+3. ¿En qué parte del mapa de memoria se encuentra `original` y en qué parte se encuentra `p`? ¿Son el mismo objeto? (recuerda usar siempre el depurador para responder estas preguntas).
+
+   Estoy seguro que los puntos que se crean se guardan en el stack, y creo que lo que se crea en la función cambiarNombre es una copia porque no veo que exista una referencia que vincule al Punto original para ser modificado.
+
+# Actividad 9: Objetos con miembros estáticos y variables de instancia
+
+1. ¿Qué puedes concluir de los miembros estáticos y de instancia de una clase en C++? ¿Cómo se gestionan en memoria? ¿Qué ventajas y desventajas tienen? ¿Cuándo es útil utilizarlos?
+
+Me parece que para la programación es una forma ágil de inicializar objetos además estos objetos se destruyen automáticamente cuando se finaliza la función, encambio si lo guadamos en el Heap hay que destruilo manualmente. 
+
+2. En el programa, en qué segmento de memoria se están almacenando c1, c2, c3 y Contador::total? 
+
+c1,c2 se guardan en el stack, mientras que  c3 se guarda en el Heap y contador total  en las variables globales.
+
+# Actividad 10: Explorando el ciclo de vida de un objeto
+
+1. Explica el ciclo de vida de un objeto en el stack versus uno en el heap.
+
+Los objetos que son creados en el stack se destruyen automáticamente cuando se finaliza la función, en cambio si lo guardamos en el Heap hay que destruirlo manualmente. 
+
+## modificación 1
+
+* ¿Compila? ¿Por qué ocurre esto?
+
+No no compila ya que se esta llamando a una variable que no existe o no esta declarada en ese bloque de código, para ello es necesario inicializarla desde el mismo bloque. 
+
+
+## modificación 2
+
+1. ¿Por qué el objeto `pBloque` se destruye al salir del bloque y `pBloque2` no? Recuerda de nuevo, `pBloque2` es un objeto o es una referencia a un objeto?
+
+Porque es un Punto creado como una objeto en el stack estas se destruyen automáticamente cuando se termina un ciclo en un bloque de llaves, en cambio pBloque2 es una referencia de una dirección de memoria de una variable en el Heap esta como permanece de forma permanente en el código se puede llamar desde cualquier lado mientras no sea destruida, por eso es que auque salga del bloque este objeto no se va a destruir y es llamado y modificado por una referencia
+
+2. ¿En qué parte de la memoria se almacena `pBloque2`?
+
+En el Heap por que es se crea con el llamado `new`
+
+
+3. ¿En qué parte de la memoria se almacena el objeto al que apunta `pBloque2`?
+
+En el Stack.
+
+# Actividad integradora de aplicación
+
+1. **Diagnóstico del problema (análisis):**
+◦ Compila y ejecuta el código.
+◦ Identifica y explica con detalle al menos **dos errores críticos** de gestión de memoria en la clase `Personaje` y su uso en `simularEncuentro`.
+◦ Para cada error, describe:
+▪ ¿Cuál es el error?
+▪ ¿Por qué ocurre? Explica el mecanismo a nivel de memoria (stack, heap, punteros)
+▪ ¿Cuál es su consecuencia?
+2. Solución y refactorización (síntesis y creación):
+◦ Re-escribe la clase `Personaje` para que sea segura en cuanto a memoria. Debes utilizar los conocimientos adquiridos en esta unidad y por tanto tu solución no debería usar la **Regla de los tres** que probablemente sea la solución que te ofrezca una IA.
+◦ Presenta el código completo de tu clase `Personaje` corregida.
+3. **Justificación de la Solución:**
+Explica por qué cada uno de los cambios que añadiste resuelven los problemas que diagnosticaste.
+
+
+## Errores
+
+* Falta de un destructor del personaje
+* `copiaHeroe.nombre = "Copia de Aragorn";` Esta copiando el nombre del personaje pero no en el pesonaje original o alque le quiere cambiar el nombre ya que no esta modificando directamete lo que hay dentro de la memoria del copiaHeroe.
+
