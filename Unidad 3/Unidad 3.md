@@ -234,9 +234,19 @@ El encapsulamientgo es una forma de proteger el código de una clase para que es
 siento que un método virtual es como algo universal que si o si deben implementar todas las clases hijas, y estos métodos se deben adaptar a la forma, figura o estructura que la clase hija lo demande en varios casos de este proyecto puede ser la función virtual dibujar: el cual debe inicializar las formas de cada clase hija y no dibujar un circulo si se le pide un cuadrado.
 
 
-# Actividad 7
+# Actividad
+```cpp
+
+```
+
+## dudas del codigo
 
 
+
+1. ¿Cómo puedes interactuar con la aplicación? Menciona específicamente las teclas y qué efecto parecen tener sobre las partículas.
+2. ¿Observas los diferentes tipos de “partículas”? ¿Se comportan todas igual inicialmente?
+3. Toma algunas capturas de pantalla de la aplicación en diferentes momentos (estado inicial, después de presionar ‘a’, ‘r’, ‘s’, ‘n’) y añádelas a tu bitácora.
+4. ¿Qué crees que está pasando “detrás de cámaras” cuando presionas las teclas? Formula una hipótesis inicial sobre cómo la aplicación cambia el comportamiento de las partículas.
 
 
 
