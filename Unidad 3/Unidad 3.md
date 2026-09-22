@@ -217,16 +217,24 @@ El encapsulamientgo es una forma de proteger el código de una clase para que es
 
 * ¿Cómo se implementa la herencia en C++?
 
-  
+  se crean como métodos vacíos de una clase abstracta las cuales pueden ser utilizadas por las clases hijas o también se les puede dar una forma individual a cada clase hija, y esta se guarda en un espacio de la memoria la cual pueda ser usada solamente por esa clase hija, es como si el sistema o la computadora creara un método automáticamente sin tener que volver a escribir el método por así decirlo. 
 
 * C++ permite hacer algo que C# no: herencia múltiple. **Realiza un experimento que te permita ver cómo se objeto en memoria cuya clase base tiene herencia múltiple.**
 
 
+# Actividad 6
+
+**Realiza un dibujo con el cuál expliques cómo se implementa el polimorfismo en tiempo de ejecución. Utiliza el concepto de métodos virtuales y la tabla de funciones virtuales. ¿Qué puedes concluir?**
+
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/e9de0213-4d41-448f-aca6-916b4914e420" />
 
 
+ **¿Qué relación existe entre los métodos virtuales y el polimorfismo?**
+
+siento que un método virtual es como algo universal que si o si deben implementar todas las clases hijas, y estos métodos se deben adaptar a la forma, figura o estructura que la clase hija lo demande en varios casos de este proyecto puede ser la función virtual dibujar: el cual debe inicializar las formas de cada clase hija y no dibujar un circulo si se le pide un cuadrado.
 
 
-
+# Actividad 7
 
 
 
