@@ -234,7 +234,10 @@ El encapsulamientgo es una forma de proteger el código de una clase para que es
 siento que un método virtual es como algo universal que si o si deben implementar todas las clases hijas, y estos métodos se deben adaptar a la forma, figura o estructura que la clase hija lo demande en varios casos de este proyecto puede ser la función virtual dibujar: el cual debe inicializar las formas de cada clase hija y no dibujar un circulo si se le pide un cuadrado.
 
 
-# Actividad
+
+#Patrones de Diseño
+
+## Actividad 8
 ```cpp
 
 ```
@@ -246,12 +249,19 @@ siento que un método virtual es como algo universal que si o si deben implement
 1. ¿Cómo puedes interactuar con la aplicación? Menciona específicamente las teclas y qué efecto parecen tener sobre las partículas.
 
 
-el programa tiene como 4 estados, (a) en donde atrae a las partículas, (s) donde las repela, () las frena las pones como en un estado de stop y (n) que las deja como en el inicio
+el programa tiene como 4 estados, (a) en donde atrae a las partículas, (r) donde las repela, (s) las frena las y pone en un estado de stop y (n) que las deja como en el inicio
 
 2. ¿Observas los diferentes tipos de “partículas”? ¿Se comportan todas igual inicialmente?
-3. Toma algunas capturas de pantalla de la aplicación en diferentes momentos (estado inicial, después de presionar ‘a’, ‘r’, ‘s’, ‘n’) y añádelas a tu bitácora.
-4. ¿Qué crees que está pasando “detrás de cámaras” cuando presionas las teclas? Formula una hipótesis inicial sobre cómo la aplicación cambia el comportamiento de las partículas.
 
+todas se comportan de forma parecida pero con diferentes variaciones de velocidad al inicio
+   
+4. Toma algunas capturas de pantalla de la aplicación en diferentes momentos (estado inicial, después de presionar ‘a’, ‘r’, ‘s’, ‘n’) y añádelas a tu bitácora.
+
+
+
+5. ¿Qué crees que está pasando “detrás de cámaras” cuando presionas las teclas? Formula una hipótesis inicial sobre cómo la aplicación cambia el comportamiento de las partículas.
+
+Pienso que hay un observador que se encarga de notificar al resto de partes del codigo que teclas oprime el usurio y estas teclas tienen diferentes eventos asignados los cuales son accionados por medio de un condicional.
 
 
 
