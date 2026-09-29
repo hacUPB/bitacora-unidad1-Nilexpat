@@ -235,9 +235,9 @@ siento que un método virtual es como algo universal que si o si deben implement
 
 
 
-#Patrones de Diseño
+# Patrones de Diseño
 
-## Actividad 8
+## Actividad 8: Enunciado
 ```cpp
 
 ```
@@ -263,9 +263,24 @@ todas se comportan de forma parecida pero con diferentes variaciones de velocida
 
 Pienso que hay un observador que se encarga de notificar al resto de partes del codigo que teclas oprime el usurio y estas teclas tienen diferentes eventos asignados los cuales son accionados por medio de un condicional.
 
+## Actividad 9: Investiga el patrón observer
 
 
+1. Explica con tus propias palabras el propósito del patrón Observer. ¿Qué problema resuelve?
 
+Este método es como muy instantáneo permite que todo el código se entere que hay un cambio de estado cuando sucede, o pueno no todo el codigo si no las partes que dependan de estos estados, se puede hacer una analogía como si alguien escribiera algo en un grupo de whatsapp. 
+
+2. Dibuja un diagrama que muestre la relación entre `Subject`, `Observer`, `ofApp` y `Particle` en el caso de estudio, indicando quién es el Sujeto y quiénes los Observadores.
+
+<img width="1102" height="650" alt="image" src="https://github.com/user-attachments/assets/0fdd2b25-29dd-4577-ab08-efecee6ad1c4" />
+
+
+3. Construye un diagrama de secuencia que muestre cómo funciona el patrón Observer al presionar una tecla.
+
+<img width="971" height="941" alt="image" src="https://github.com/user-attachments/assets/80ba9547-de9f-49bd-97d8-04ba78645e54" />
+
+
+4. ¿Qué ventajas crees que ofrece usar el patrón Observer en esta aplicación en comparación con, por ejemplo, que `ofApp::update` recorriera todas las partículas y les dijera directamente que cambien su comportamiento basado en una variable global? Piensa en términos de acoplamiento y extensibilidad.
 
 
 
