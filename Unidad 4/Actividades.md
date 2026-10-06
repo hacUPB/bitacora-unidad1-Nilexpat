@@ -15,4 +15,5 @@
 
 * ¿porque la memoria consume constante 257Mb si solo es un triangulo dibujado en la pantalla?
 * ¿ en que casos es mejor dibujar cosas por la GPU, y para que se usa eso ?
-* 
+
+# Actividad 2
