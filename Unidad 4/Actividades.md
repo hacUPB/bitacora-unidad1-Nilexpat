@@ -39,3 +39,11 @@ La GPU es quien realmente dibuja, y OpenGL es la API que le dice a la GPU qué y
 4. **¿Qué es el viewport?**
 
 El viewport define qué parte del framebuffer se usará para dibujar. Se mide en píxeles y normalmente coincide con el tamaño completo del framebuffer.Si el viewport no se ajusta correctamente al tamaño del framebuffer, lo que dibujas podría aparecer estirado, recortado o mal posicionado.
+
+¿Qué pasa si?
+
+`glViewport(0, bufferHeight/2, bufferWidth/2, bufferHeight/2);`
+
+<img width="392/2" height="426/2" alt="image" src="https://github.com/user-attachments/assets/750ea807-2e41-4060-b60f-99626ff46989" />
+
+Cambia los valores de bufferWidth y bufferHeight: divide por 2, por 4, multiplica por 2, por 4, etc. ¿Qué pasa? ¿Qué observas? ¿Qué crees que está pasando?
