@@ -46,4 +46,14 @@ El viewport define qué parte del framebuffer se usará para dibujar. Se mide en
 
 <img width="392/2" height="426/2" alt="image" src="https://github.com/user-attachments/assets/750ea807-2e41-4060-b60f-99626ff46989" />
 
-Cambia los valores de bufferWidth y bufferHeight: divide por 2, por 4, multiplica por 2, por 4, etc. ¿Qué pasa? ¿Qué observas? ¿Qué crees que está pasando?
+Cambia los valores de bufferWidth y bufferHeight: divide por 2, por 4, multiplica por 2, por 4, etc.
+¿Qué pasa? 
+
+
+
+¿Qué observas?
+
+
+
+¿Qué crees que está pasando?
+
