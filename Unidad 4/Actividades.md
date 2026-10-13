@@ -17,3 +17,25 @@
 * ¿ en que casos es mejor dibujar cosas por la GPU, y para que se usa eso ?
 
 # Actividad 2
+se instalo con exito.
+
+
+# Actividad 03
+
+## Preguntas tipo Parcial 
+
+1. ¿Recuerdas qué es el contexto de OpenGL?
+
+**Contexto OpenGL:** es el entorno donde OpenGL guarda todo el estado gráfico (shaders, texturas, buffers, etc.). Lo necesitas para que las funciones de OpenGL tengan efecto.
+
+2. ¿Qué es el framebuffer?
+
+El framebuffer es una porción de memoria donde OpenGL dibuja los píxeles antes de enviarlos a la pantalla. Podemos imaginarlo como una “hoja invisible” donde OpenGL pinta cada imagen cuadro a cuadro.
+
+3. ¿Quien dibuja realmente la GPU o OpenGL?
+
+La GPU es quien realmente dibuja, y OpenGL es la API que le dice a la GPU qué y cómo dibujar.
+
+4. **¿Qué es el viewport?**
+
+El viewport define qué parte del framebuffer se usará para dibujar. Se mide en píxeles y normalmente coincide con el tamaño completo del framebuffer.Si el viewport no se ajusta correctamente al tamaño del framebuffer, lo que dibujas podría aparecer estirado, recortado o mal posicionado.
