@@ -1,0 +1,100 @@
+# Actividad 1
+
+1. Incluye una captura de pantalla del ejemplo funcionando en tu máquina.
+
+<img width="1910" height="970" alt="image" src="https://github.com/user-attachments/assets/19e07fd4-41d8-49b3-b052-c88c5c2cf29e" />
+
+2. Observa el proyecto, trata de entenderlo, pero ten presente que lo analizaremos más adelante.
+
+* primero veo que el viewport se ajusta automáticamente a la pantalla
+*  veo que se invoca como una instancia de un shader o algo así : const char* vertexShaderSrc = R"glsl()
+*  esto le da la posicion inicial del triangulo.
+*  const char* fragmentShaderSrc = R"glsl(): este le da el color al triangulo.
+
+3. ¿Qué preguntas te surgen al ver el código? Anota al menos tres preguntas que te gustaría investigar más adelante (no te preocupes que la idea de esta unidad es que las resuelvas).
+
+* ¿porque la memoria consume constante 257Mb si solo es un triangulo dibujado en la pantalla?
+* ¿ en que casos es mejor dibujar cosas por la GPU, y para que se usa eso ?
+
+# Actividad 2
+se instalo con exito.
+
+
+# Actividad 03
+
+## Preguntas tipo Parcial 
+
+1. ¿Recuerdas qué es el contexto de OpenGL?
+
+**Contexto OpenGL:** es el entorno donde OpenGL guarda todo el estado gráfico (shaders, texturas, buffers, etc.). Lo necesitas para que las funciones de OpenGL tengan efecto.
+
+2. ¿Qué es el framebuffer?
+
+El framebuffer es una porción de memoria donde OpenGL dibuja los píxeles antes de enviarlos a la pantalla. Podemos imaginarlo como una “hoja invisible” donde OpenGL pinta cada imagen cuadro a cuadro.
+
+3. ¿Quien dibuja realmente la GPU o OpenGL?
+
+La GPU es quien realmente dibuja, y OpenGL es la API que le dice a la GPU qué y cómo dibujar.
+
+4. **¿Qué es el viewport?**
+
+El viewport define qué parte del framebuffer se usará para dibujar. Se mide en píxeles y normalmente coincide con el tamaño completo del framebuffer.Si el viewport no se ajusta correctamente al tamaño del framebuffer, lo que dibujas podría aparecer estirado, recortado o mal posicionado.
+
+¿Qué pasa si?
+
+`glViewport(0, bufferHeight/2, bufferWidth/2, bufferHeight/2);`
+
+<img width="392/2" height="426/2" alt="image" src="https://github.com/user-attachments/assets/750ea807-2e41-4060-b60f-99626ff46989" />
+
+Cambia los valores de bufferWidth y bufferHeight: divide por 2, por 4, multiplica por 2, por 4, etc.
+¿Qué pasa? 
+
+El triangulo se reduce a la mitad
+
+¿Qué observas?
+
+Veo que las figura se encoje a la mitad y se inicializa como en el lado superior izquierdo de la pantalla.
+
+¿Qué crees que está pasando?
+
+creo que la pantalla en donde se carga o donde se dibuja se inicializa normalmente pero la instrucción del tamaño hace que ciertos pixeles se dibujen como se les ordena en el codigo, vemos que el punto de partida o la posicion inicial del objeto no se encuetra en el centro de la pantalla sino en la parte superior izquierda.
+
+También observe que se reiniciaba el tamaña del triangunlo si cambiaba a pantalla completa.
+
+**`glfwSwapInterval(1);`**: Esta función es la que se encarga de la sincronización vertical en si esta activa la sincronización vertical, esta se encarga de igualar la tasa de fotogramas con la velocidad de fotogramas del monitor/ pantalla.
+
+se llama sincronización vertical ya que hace referencia a los antiguos televisores que dibujaban la imagen como en un computador nand entonces iba llenando lo pixeles de arriba hacia abajo para luego apagarlo esperar la otra imagen y volver a empezar a recrear el otro fotograma
+
+
+1. ¿Qué pasa si cambias el primer parámetro de glDrawArrays a GL_LINES?
+
+
+2. ¿Qué pasa si lo cambias a GL_POINTS?
+
+
+3. ¿Qué pasa si cambias el tercer parámetro a 2?
+
+
+4. ¿Qué pasa si lo cambias a 4?
+
+
+5. En esta unidad no profundizaremos en los tipos de primitivas, pero es importante que entiendas que OpenGL puede dibujar diferentes tipos de primitivas (triángulos, líneas, puntos, etc.).
+
+
+
+**`glfwSwapBuffers(mainWindow);`**: esta función hace que no exista el parpadeo entre fotogramas, haciendo Swap entre dos frameBuffers el delantero y el trasero.
+
+## Actividad tipo Parcial:
+
+1. ¿Qué es el contexto OpenGL?
+2. ¿Cuál es el rol de la biblioteca GLFW y qué ventaja tiene usarla?
+3. ¿Por qué crees que OpenGL necesita un contexto (recuerda la analogía del taller de arte)?
+4. ¿En últimas qué será el framebuffer y a qué te recuerda de las dos primeras unidades del curso?
+5. ¿Qué relación entre en el viewport y el framebuffer?
+6. ¿En todo la analizado hasta ahora qué rol juega los drivers de la GPU y la GPU misma?
+7. ¿Por qué crees que sea necesario activar el VSync? ¿Si no lo activas y la imagen es estática qué crees que pase, y si es dinámica?
+8. En esta unidad estamos usando OpenGL moderno, pero ¿Qué es OpenGL Legacy? ¿Qué diferencias hay entre ambos?
+9. ¿Qué es el shader program? ¿Por qué es importante en OpenGL moderno?
+10. Trata de revisar el código setupTriangle(), intuitivamente ¿Qué crees que hace? ¿Qué crees que es el VAO y el VBO?
+11. En el ciclo principal (game loop) de OpenGL, notaste que en cada frame (cuadro) le decimos a openGL que use el shader program y el VAO. Si le indicas esto antes del game loop ¿Será necesario seguirlo haciendo en cada loop? Si no es necesario ¿En qué casos crees que esto puede ser útil?
+12. Finalmente, recuerda lo que hace `glfwSwapBuffers(mainWindow);` ¿Por qué crees que es importante? ¿Qué pasaría si no lo llamas? ¿Cómo explicas lo que pasa si no lo llamas? (experimenta)
