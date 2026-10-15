@@ -49,11 +49,15 @@ El viewport define qué parte del framebuffer se usará para dibujar. Se mide en
 Cambia los valores de bufferWidth y bufferHeight: divide por 2, por 4, multiplica por 2, por 4, etc.
 ¿Qué pasa? 
 
-
+El triangulo se reduce a la mitad
 
 ¿Qué observas?
 
-
+Veo que las figura se encoje a la mitad y se inicializa como en el lado superior izquierdo de la pantalla.
 
 ¿Qué crees que está pasando?
+
+creo que la pantalla en donde se carga o donde se dibuja se inicializa normalmente pero la instrucción del tamaño hace que ciertos pixeles se dibujen como se les ordena en el codigo, vemos que el punto de partida o la posicion inicial del objeto no se encuetra en el centro de la pantalla sino en la parte superior izquierda.
+
+También observe que se reiniciaba el tamaña del triangunlo si cambiaba a pantalla completa.
 
