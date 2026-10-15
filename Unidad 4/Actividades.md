@@ -83,3 +83,18 @@ se llama sincronización vertical ya que hace referencia a los antiguos televiso
 
 
 **`glfwSwapBuffers(mainWindow);`**: esta función hace que no exista el parpadeo entre fotogramas, haciendo Swap entre dos frameBuffers el delantero y el trasero.
+
+### Actividad tipo Parcial:
+
+1. ¿Qué es el contexto OpenGL?
+2. ¿Cuál es el rol de la biblioteca GLFW y qué ventaja tiene usarla?
+3. ¿Por qué crees que OpenGL necesita un contexto (recuerda la analogía del taller de arte)?
+4. ¿En últimas qué será el framebuffer y a qué te recuerda de las dos primeras unidades del curso?
+5. ¿Qué relación entre en el viewport y el framebuffer?
+6. ¿En todo la analizado hasta ahora qué rol juega los drivers de la GPU y la GPU misma?
+7. ¿Por qué crees que sea necesario activar el VSync? ¿Si no lo activas y la imagen es estática qué crees que pase, y si es dinámica?
+8. En esta unidad estamos usando OpenGL moderno, pero ¿Qué es OpenGL Legacy? ¿Qué diferencias hay entre ambos?
+9. ¿Qué es el shader program? ¿Por qué es importante en OpenGL moderno?
+10. Trata de revisar el código setupTriangle(), intuitivamente ¿Qué crees que hace? ¿Qué crees que es el VAO y el VBO?
+11. En el ciclo principal (game loop) de OpenGL, notaste que en cada frame (cuadro) le decimos a openGL que use el shader program y el VAO. Si le indicas esto antes del game loop ¿Será necesario seguirlo haciendo en cada loop? Si no es necesario ¿En qué casos crees que esto puede ser útil?
+12. Finalmente, recuerda lo que hace `glfwSwapBuffers(mainWindow);` ¿Por qué crees que es importante? ¿Qué pasaría si no lo llamas? ¿Cómo explicas lo que pasa si no lo llamas? (experimenta)
