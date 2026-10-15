@@ -66,3 +66,20 @@ También observe que se reiniciaba el tamaña del triangunlo si cambiaba a panta
 se llama sincronización vertical ya que hace referencia a los antiguos televisores que dibujaban la imagen como en un computador nand entonces iba llenando lo pixeles de arriba hacia abajo para luego apagarlo esperar la otra imagen y volver a empezar a recrear el otro fotograma
 
 
+1. ¿Qué pasa si cambias el primer parámetro de glDrawArrays a GL_LINES?
+
+
+2. ¿Qué pasa si lo cambias a GL_POINTS?
+
+
+3. ¿Qué pasa si cambias el tercer parámetro a 2?
+
+
+4. ¿Qué pasa si lo cambias a 4?
+
+
+5. En esta unidad no profundizaremos en los tipos de primitivas, pero es importante que entiendas que OpenGL puede dibujar diferentes tipos de primitivas (triángulos, líneas, puntos, etc.).
+
+
+
+**`glfwSwapBuffers(mainWindow);`**: esta función hace que no exista el parpadeo entre fotogramas, haciendo Swap entre dos frameBuffers el delantero y el trasero.
