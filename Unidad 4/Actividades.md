@@ -84,7 +84,7 @@ se llama sincronización vertical ya que hace referencia a los antiguos televiso
 
 **`glfwSwapBuffers(mainWindow);`**: esta función hace que no exista el parpadeo entre fotogramas, haciendo Swap entre dos frameBuffers el delantero y el trasero.
 
-### Actividad tipo Parcial:
+## Actividad tipo Parcial:
 
 1. ¿Qué es el contexto OpenGL?
 2. ¿Cuál es el rol de la biblioteca GLFW y qué ventaja tiene usarla?
