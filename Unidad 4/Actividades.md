@@ -61,3 +61,8 @@ creo que la pantalla en donde se carga o donde se dibuja se inicializa normalmen
 
 También observe que se reiniciaba el tamaña del triangunlo si cambiaba a pantalla completa.
 
+**`glfwSwapInterval(1);`**: Esta función es la que se encarga de la sincronización vertical en si esta activa la sincronización vertical, esta se encarga de igualar la tasa de fotogramas con la velocidad de fotogramas del monitor/ pantalla.
+
+se llama sincronización vertical ya que hace referencia a los antiguos televisores que dibujaban la imagen como en un computador nand entonces iba llenando lo pixeles de arriba hacia abajo para luego apagarlo esperar la otra imagen y volver a empezar a recrear el otro fotograma
+
+
