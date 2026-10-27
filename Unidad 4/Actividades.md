@@ -110,29 +110,59 @@ la CPU es capaz de pintar la pantalla de forma lineal pero no toda al mismo tiem
 
 1. ¿Cuáles son los tres pasos claves del pipeline de OpenGL? Explica en tus propias palabras cuál es el objetivo de cada paso.
 
-Vertex Shading:
+**Vertex Shading:**
 
 Este es el calculo matricial entre miles de triángulos que observa la cámara en un escenario 3D
 
 <img width="1029" height="519" alt="image" src="https://github.com/user-attachments/assets/db49ef37-c943-45aa-a4d8-32c4dbf4525c" />
 
 
-Rasterizacion:
+**Rasterizacion:**
 
-Es el mapeo que se hace después del vertex Shading y lo que hace es que relaciona cada triangulo, linea o vértice con un pixel de la pantalla.
+Es el mapeo que se hace después del vertex Shading y lo que hace es que relaciona cada triangulo, linea o vértice con un pixel de la pantalla esto por medio de las coordenadas X y Y de una cuadricula masiva (View Screen).
+
+<img width="861" height="486" alt="image" src="https://github.com/user-attachments/assets/27939f3f-4e86-4cd4-8bd2-895ac0d05d32" />
+
+luego se menciona sobre el Z buffer que es una coordenada de profundidad y esta coordenada indica que se debe dibujar en la pantalla si se encuentran objetos detrás de otros
+
+**Fragmen Shading:**
+
+se utiliza para sombrear cada pixel con una iluminación precisa para que la escena se vea realista. Si un triangulo se encuentra perpendicular a la luz su valor es 0 por lo tanto se va ver oscuro, el caso contrarios es si la superficie mira directamente a la luz.
+
+todos estos 3 procesos suceden una vez cada 8.3 ms
+
+
+2. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar?
+
+
+3. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
+Es el mapeo que se hace después del vertex Shading y lo que hace es que relaciona cada triangulo, linea o vértice con un pixel de la pantalla esto por medio de las coordenadas X y Y de una cuadricula masiva (View Screen).
 
 <img width="861" height="486" alt="image" src="https://github.com/user-attachments/assets/27939f3f-4e86-4cd4-8bd2-895ac0d05d32" />
 
 
-Fragmen Shading:
-
-
-
-
-2. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar?
-3. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
 4. ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
+
+un fragmento e un triangulo creado por 3 puntos en una malla, en una malla o meshes pueden haber miles de triangulos, un pixel es un puntico en la pantalla el cual se colorea según las propiedades que tenga el fragmento 
+
 5. Explica qué problema resuelve el **Z-buffer** y ¿Qué es el depth test?
+
+se utiliza para sombrear cada pixel con una iluminación precisa para que la escena se vea realista. Si un triangulo se encuentra perpendicular a la luz su valor es 0 por lo tanto se va ver oscuro, el caso contrarios es si la superficie mira directamente a la luz.
+
 6. ¿Por qué se presenta el problema de la **aliasing**? ¿Qué es el anti-aliasing?
+
+Para hacer que los bordes que pinta un fragmento en la pantalla causen una ilusion optica y se vean mas precisos cuando la cantidad de pixeles no son los suficientes para interpretar un área de un fragmento.
+
 7. ¿Qué relación hay entre la iluminación y el fragment shader? Siempre es necesario tener en cuenta la iluminación en un fragment shader? o puedo hacer un fragment shader sin iluminación? Explica que implicaciones tiene esto.
+
+Si un triangulo se encuentra perpendicular a la luz su valor es 0 por lo tanto se va ver oscuro, el caso contrarios es si la superficie mira directamente a la luz.
+
+también vi que era posible hacer una ilusión optica con la combiancion de las normales de cada punto de un fragmento.
+
 8. ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
+
+son mas cálculos de iluminación en cada fragmento , lo cual puede dificultar la fluencia del juego, en estos casos delimitan las iluminaciones para zonas en especifico.
+
+
+
+
