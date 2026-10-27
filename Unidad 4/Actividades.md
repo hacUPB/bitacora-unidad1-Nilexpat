@@ -98,3 +98,21 @@ se llama sincronización vertical ya que hace referencia a los antiguos televiso
 10. Trata de revisar el código setupTriangle(), intuitivamente ¿Qué crees que hace? ¿Qué crees que es el VAO y el VBO?
 11. En el ciclo principal (game loop) de OpenGL, notaste que en cada frame (cuadro) le decimos a openGL que use el shader program y el VAO. Si le indicas esto antes del game loop ¿Será necesario seguirlo haciendo en cada loop? Si no es necesario ¿En qué casos crees que esto puede ser útil?
 12. Finalmente, recuerda lo que hace `glfwSwapBuffers(mainWindow);` ¿Por qué crees que es importante? ¿Qué pasaría si no lo llamas? ¿Cómo explicas lo que pasa si no lo llamas? (experimenta)
+
+# Actividad 04
+
+## Video 1
+¿Cuál es la diferencia entre una CPU y una GPU?
+
+la CPU es capaz de pintar la pantalla de forma lineal pero no toda al mismo tiempo, si la CPU quiere pintar una pantalla de azul en tiene que hacerlo pixel por pixel como en el computador Nand de la primera unidad, en cambio una CPU es capaz de pintar toda la pantalla en el mismo tiempo que demora CPU en pintar un pixel esto debido a que la GPU es una mini computadora diseñada para estos trabajos en específicos y poseen muchos núcleos que pueden iterar varias cosas diferentes al mismo tiempo. 
+
+## Video 2
+
+1. ¿Cuáles son los tres pasos claves del pipeline de OpenGL? Explica en tus propias palabras cuál es el objetivo de cada paso.
+2. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar?
+3. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
+4. ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
+5. Explica qué problema resuelve el **Z-buffer** y ¿Qué es el depth test?
+6. ¿Por qué se presenta el problema de la **aliasing**? ¿Qué es el anti-aliasing?
+7. ¿Qué relación hay entre la iluminación y el fragment shader? Siempre es necesario tener en cuenta la iluminación en un fragment shader? o puedo hacer un fragment shader sin iluminación? Explica que implicaciones tiene esto.
+8. ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
