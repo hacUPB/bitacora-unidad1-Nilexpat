@@ -109,6 +109,26 @@ la CPU es capaz de pintar la pantalla de forma lineal pero no toda al mismo tiem
 ## Video 2
 
 1. ¿Cuáles son los tres pasos claves del pipeline de OpenGL? Explica en tus propias palabras cuál es el objetivo de cada paso.
+
+Vertex Shading:
+
+Este es el calculo matricial entre miles de triángulos que observa la cámara en un escenario 3D
+
+<img width="1029" height="519" alt="image" src="https://github.com/user-attachments/assets/db49ef37-c943-45aa-a4d8-32c4dbf4525c" />
+
+
+Rasterizacion:
+
+Es el mapeo que se hace después del vertex Shading y lo que hace es que relaciona cada triangulo, linea o vértice con un pixel de la pantalla.
+
+<img width="861" height="486" alt="image" src="https://github.com/user-attachments/assets/27939f3f-4e86-4cd4-8bd2-895ac0d05d32" />
+
+
+Fragmen Shading:
+
+
+
+
 2. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar?
 3. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
 4. ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
